@@ -1,0 +1,366 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5FFB1E348CF0F88326D2381B /* PayflowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F1A9D3B771BF055ED610A7 /* PayflowApp.swift */; };
+		8AE47EC6EE729C3BD43473F2 /* AppModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F241DE7A7F60113FCCA10CC3 /* AppModels.swift */; };
+		230E16981D0CB655B22DC5A1 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF5C25582DB9C2A316E581F /* KeychainService.swift */; };
+		90172716C3D85CEED824D921 /* BiometricAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7D5C1BC0F799BEF6588E5D /* BiometricAuthService.swift */; };
+		4C856B76DC90A4ED29413546 /* CategorizationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6645DFFFB8D84E82554BE9F7 /* CategorizationEngine.swift */; };
+		D857A664FF849A52EEB618F4 /* BankConnectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296B173B1EC33CFD9337A0DD /* BankConnectService.swift */; };
+		40C5810C75F5F6913CF9BDBE /* ImportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD60BDE01B351BA7CFC7D431 /* ImportService.swift */; };
+		CA1EA718D0EDC52F9BE89111 /* RecurringDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CE931A2904A6B7D7CD9325 /* RecurringDetector.swift */; };
+		93EFFC88ECC64171605CFA30 /* AIAssistantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA790F0E497EF7A9C0DC5522 /* AIAssistantService.swift */; };
+		B2CC7DCC2C668A1F7BB651E9 /* ReportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B65C53668BCF77925A0A6A /* ReportService.swift */; };
+		9B9721F40C1EEA1A4622ACF2 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A6BD97B2E63D8B5516CAA6 /* SampleData.swift */; };
+		F111ACF16DC721C07331EE57 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE57A626825ACA5743D3F61 /* Theme.swift */; };
+		12D80E8648DB7F8519AC59CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5833F640FCA2F8D3BA2CA9 /* ContentView.swift */; };
+		602685C2CBBD22310C68FCB2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB34F7EA510A0D6F51659618 /* HomeView.swift */; };
+		8E44FBF3A314DF5290B6EE05 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4090E1A6E738469A9E33DA /* TransactionsView.swift */; };
+		5887E6C6F956F3B44F539674 /* AnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A65BE256187FCC48F65BF0 /* AnalyticsView.swift */; };
+		D827F7B9367909A0CFDC334D /* BudgetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B4619216982FE04F9C16D0 /* BudgetsView.swift */; };
+		D7F8286F53971BDF7E8B9531 /* SubscriptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9921C53ADC3305AF9908ED80 /* SubscriptionsView.swift */; };
+		4E4964F956A0B059BA7F9540 /* AIAssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0A7499B040E2D8A8176F12 /* AIAssistantView.swift */; };
+		E57660D3190B109F129DB04A /* IntegrationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34DB3EAE1A1C8E2707D5C55 /* IntegrationsView.swift */; };
+		91C3BB93A230BB4E68935993 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0A433C4CC05F56EB0561C /* SettingsView.swift */; };
+		D6A3713F88F3C0C0E4F31206 /* SharedComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7079742DE8EA3F5B5B4640 /* SharedComponents.swift */; };
+		A11A0A1A2B3C4D5E6F708192 /* AutomationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22A0A2A3B4C5D6E7F8091A3 /* AutomationService.swift */; };
+		A33A0A3A4B5C6D7E8F90A1B4 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A0A4A5B6C7D8E9F01A2B5 /* NotificationService.swift */; };
+		A55A0A5A6B7C8D9E0F12A3B6 /* AutomationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66A0A6A7B8C9D0E1F23A4B7 /* AutomationView.swift */; };
+		4AB75DE1A5B156D1A3798B6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F04640FF7ED4D05DDA8F3081 /* Assets.xcassets */; };
+		BB6F1DFFA46ED625BE94C6CD /* sample-statement.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1544E66C3A96E1CB8ECA6246 /* sample-statement.csv */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		83F1A9D3B771BF055ED610A7 /* PayflowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayflowApp.swift; sourceTree = "<group>"; };
+		F241DE7A7F60113FCCA10CC3 /* AppModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModels.swift; sourceTree = "<group>"; };
+		6EF5C25582DB9C2A316E581F /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		2E7D5C1BC0F799BEF6588E5D /* BiometricAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthService.swift; sourceTree = "<group>"; };
+		6645DFFFB8D84E82554BE9F7 /* CategorizationEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorizationEngine.swift; sourceTree = "<group>"; };
+		296B173B1EC33CFD9337A0DD /* BankConnectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankConnectService.swift; sourceTree = "<group>"; };
+		CD60BDE01B351BA7CFC7D431 /* ImportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportService.swift; sourceTree = "<group>"; };
+		87CE931A2904A6B7D7CD9325 /* RecurringDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurringDetector.swift; sourceTree = "<group>"; };
+		FA790F0E497EF7A9C0DC5522 /* AIAssistantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIAssistantService.swift; sourceTree = "<group>"; };
+		C3B65C53668BCF77925A0A6A /* ReportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportService.swift; sourceTree = "<group>"; };
+		E8A6BD97B2E63D8B5516CAA6 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		6BE57A626825ACA5743D3F61 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		1E5833F640FCA2F8D3BA2CA9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CB34F7EA510A0D6F51659618 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2E4090E1A6E738469A9E33DA /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
+		82A65BE256187FCC48F65BF0 /* AnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsView.swift; sourceTree = "<group>"; };
+		76B4619216982FE04F9C16D0 /* BudgetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetsView.swift; sourceTree = "<group>"; };
+		9921C53ADC3305AF9908ED80 /* SubscriptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsView.swift; sourceTree = "<group>"; };
+		DD0A7499B040E2D8A8176F12 /* AIAssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIAssistantView.swift; sourceTree = "<group>"; };
+		E34DB3EAE1A1C8E2707D5C55 /* IntegrationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationsView.swift; sourceTree = "<group>"; };
+		48D0A433C4CC05F56EB0561C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AD7079742DE8EA3F5B5B4640 /* SharedComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedComponents.swift; sourceTree = "<group>"; };
+		A22A0A2A3B4C5D6E7F8091A3 /* AutomationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomationService.swift; sourceTree = "<group>"; };
+		A44A0A4A5B6C7D8E9F01A2B5 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		A66A0A6A7B8C9D0E1F23A4B7 /* AutomationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomationView.swift; sourceTree = "<group>"; };
+		F04640FF7ED4D05DDA8F3081 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C5E2951F9707D75B80F3D5AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71D2F85E939D2711CEA659E1 /* Payflow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Payflow.entitlements; sourceTree = "<group>"; };
+		1544E66C3A96E1CB8ECA6246 /* sample-statement.csv */ = {isa = PBXFileReference; lastKnownFileType = text.csv; path = sample-statement.csv; sourceTree = "<group>"; };
+		E706D039BCEFA7AF830CED7F /* Payflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Payflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11776FA3EAB3463233FC36BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DABA5DDCFAF4A922C4AEBD03 = {
+			isa = PBXGroup;
+			children = (
+				7D128A02237224D83D6F4748 /* Payflow */,
+				E706D039BCEFA7AF830CED7F /* Payflow.app */,
+			);
+			sourceTree = "<group>";
+		};
+		7D128A02237224D83D6F4748 /* Payflow */ = {
+			isa = PBXGroup;
+			children = (
+				83F1A9D3B771BF055ED610A7 /* PayflowApp.swift */,
+				B9EBC0DE6BA659CB9710133C /* Models */,
+				C3FB28766BF74FF0B3A2A775 /* Services */,
+				A3FE7A23E810026BAAB5C970 /* Views */,
+				9A1A77634ECE1B8DCDEF3C94 /* Resources */,
+				C5E2951F9707D75B80F3D5AE /* Info.plist */,
+				71D2F85E939D2711CEA659E1 /* Payflow.entitlements */,
+			);
+			path = Payflow;
+			sourceTree = "<group>";
+		};
+		B9EBC0DE6BA659CB9710133C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F241DE7A7F60113FCCA10CC3 /* AppModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C3FB28766BF74FF0B3A2A775 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6EF5C25582DB9C2A316E581F /* KeychainService.swift */,
+				2E7D5C1BC0F799BEF6588E5D /* BiometricAuthService.swift */,
+				6645DFFFB8D84E82554BE9F7 /* CategorizationEngine.swift */,
+				296B173B1EC33CFD9337A0DD /* BankConnectService.swift */,
+				CD60BDE01B351BA7CFC7D431 /* ImportService.swift */,
+				87CE931A2904A6B7D7CD9325 /* RecurringDetector.swift */,
+				FA790F0E497EF7A9C0DC5522 /* AIAssistantService.swift */,
+				C3B65C53668BCF77925A0A6A /* ReportService.swift */,
+				E8A6BD97B2E63D8B5516CAA6 /* SampleData.swift */,
+				A22A0A2A3B4C5D6E7F8091A3 /* AutomationService.swift */,
+				A44A0A4A5B6C7D8E9F01A2B5 /* NotificationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A3FE7A23E810026BAAB5C970 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6BE57A626825ACA5743D3F61 /* Theme.swift */,
+				1E5833F640FCA2F8D3BA2CA9 /* ContentView.swift */,
+				CB34F7EA510A0D6F51659618 /* HomeView.swift */,
+				2E4090E1A6E738469A9E33DA /* TransactionsView.swift */,
+				82A65BE256187FCC48F65BF0 /* AnalyticsView.swift */,
+				76B4619216982FE04F9C16D0 /* BudgetsView.swift */,
+				9921C53ADC3305AF9908ED80 /* SubscriptionsView.swift */,
+				DD0A7499B040E2D8A8176F12 /* AIAssistantView.swift */,
+				E34DB3EAE1A1C8E2707D5C55 /* IntegrationsView.swift */,
+				48D0A433C4CC05F56EB0561C /* SettingsView.swift */,
+				A66A0A6A7B8C9D0E1F23A4B7 /* AutomationView.swift */,
+				71A9DD4ED6B55095507B5F21 /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		71A9DD4ED6B55095507B5F21 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AD7079742DE8EA3F5B5B4640 /* SharedComponents.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		9A1A77634ECE1B8DCDEF3C94 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F04640FF7ED4D05DDA8F3081 /* Assets.xcassets */,
+				1544E66C3A96E1CB8ECA6246 /* sample-statement.csv */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A4B844406C7BC981708BACBA /* Payflow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FF93DAD2E11AA9204226674 /* Build configuration list for PBXNativeTarget "Payflow" */;
+			buildPhases = (
+				D2F012FE9185965874A0CE39 /* Sources */,
+				11776FA3EAB3463233FC36BB /* Frameworks */,
+				40B19E10AB66060F96D12D8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Payflow;
+			productName = Payflow;
+			productReference = E706D039BCEFA7AF830CED7F /* Payflow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C542D6D68A2BE89FAF7C7102 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					A4B844406C7BC981708BACBA = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = 99CF8F0D7B3B10F56462C456 /* Build configuration list for PBXProject "PAYFLOW" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DABA5DDCFAF4A922C4AEBD03;
+			productRefGroup = DABA5DDCFAF4A922C4AEBD03;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4B844406C7BC981708BACBA /* Payflow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40B19E10AB66060F96D12D8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AB75DE1A5B156D1A3798B6A /* Assets.xcassets in Resources */,
+				BB6F1DFFA46ED625BE94C6CD /* sample-statement.csv in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2F012FE9185965874A0CE39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FFB1E348CF0F88326D2381B /* PayflowApp.swift in Sources */,
+				8AE47EC6EE729C3BD43473F2 /* AppModels.swift in Sources */,
+				230E16981D0CB655B22DC5A1 /* KeychainService.swift in Sources */,
+				90172716C3D85CEED824D921 /* BiometricAuthService.swift in Sources */,
+				4C856B76DC90A4ED29413546 /* CategorizationEngine.swift in Sources */,
+				D857A664FF849A52EEB618F4 /* BankConnectService.swift in Sources */,
+				40C5810C75F5F6913CF9BDBE /* ImportService.swift in Sources */,
+				CA1EA718D0EDC52F9BE89111 /* RecurringDetector.swift in Sources */,
+				93EFFC88ECC64171605CFA30 /* AIAssistantService.swift in Sources */,
+				B2CC7DCC2C668A1F7BB651E9 /* ReportService.swift in Sources */,
+				9B9721F40C1EEA1A4622ACF2 /* SampleData.swift in Sources */,
+				F111ACF16DC721C07331EE57 /* Theme.swift in Sources */,
+				12D80E8648DB7F8519AC59CB /* ContentView.swift in Sources */,
+				602685C2CBBD22310C68FCB2 /* HomeView.swift in Sources */,
+				8E44FBF3A314DF5290B6EE05 /* TransactionsView.swift in Sources */,
+				5887E6C6F956F3B44F539674 /* AnalyticsView.swift in Sources */,
+				D827F7B9367909A0CFDC334D /* BudgetsView.swift in Sources */,
+				D7F8286F53971BDF7E8B9531 /* SubscriptionsView.swift in Sources */,
+				4E4964F956A0B059BA7F9540 /* AIAssistantView.swift in Sources */,
+				E57660D3190B109F129DB04A /* IntegrationsView.swift in Sources */,
+				91C3BB93A230BB4E68935993 /* SettingsView.swift in Sources */,
+				D6A3713F88F3C0C0E4F31206 /* SharedComponents.swift in Sources */,
+				A11A0A1A2B3C4D5E6F708192 /* AutomationService.swift in Sources */,
+				A33A0A3A4B5C6D7E8F90A1B4 /* NotificationService.swift in Sources */,
+				A55A0A5A6B7C8D9E0F12A3B6 /* AutomationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		446ABE6AB476BD65C13F7069 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFS = "";
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5970E82F8F06D1C005EE2E3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFS = "";
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		85707D6DBC86D2C4EC82056A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Payflow/Payflow.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Payflow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.payflow.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C23AE8FFE26CC4F874B99FAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Payflow/Payflow.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Payflow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.payflow.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		99CF8F0D7B3B10F56462C456 /* Build configuration list for PBXProject "PAYFLOW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				446ABE6AB476BD65C13F7069 /* Debug */,
+				5970E82F8F06D1C005EE2E3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FF93DAD2E11AA9204226674 /* Build configuration list for PBXNativeTarget "Payflow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85707D6DBC86D2C4EC82056A /* Debug */,
+				C23AE8FFE26CC4F874B99FAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C542D6D68A2BE89FAF7C7102 /* Project object */;
+}
