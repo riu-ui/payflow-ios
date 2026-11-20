@@ -8,6 +8,7 @@ import SwiftUI
 // The physical card visual is black with a muted silver chip.
 // Variable names are kept (emerald = primary accent) so every existing
 // view picks up the new look without edits; only the values changed.
+// First GitHub Actions build triggered 20 Nov 2026.
 
 enum PayTheme {
     static let background = Color(red: 0.08, green: 0.08, blue: 0.08) // #141414 black body
