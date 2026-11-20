@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSFaceIDUsageDescription</key>
+	<string>PAYFLOW uses Face ID to lock your financial data and unlock it only for you.</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>CFBundleDisplayName</key>
+	<string>PAYFLOW</string>
+	<!-- URL scheme for Shortcuts automations (see AutomationService.swift).
+	     Shortcuts "Open URLs" calls payflow://log-payment?... to hand a
+	     payment to PAYFLOW. Nothing else uses this scheme. -->
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.payflow.app.automation</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>payflow</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>
