@@ -1,3 +1,23 @@
+# PAYFLOW — build an unsigned .ipa on GitHub Actions, no Mac needed.
+#
+# How it works (free, personal use):
+#  1. Push this repo to GitHub (public repo = unlimited free Actions minutes;
+#     private repo = 2,000 free minutes/month, each build ~10-15 min on macOS).
+#  2. Actions tab -> "Build PAYFLOW iOS (unsigned IPA)" -> Run workflow.
+#  3. Download the `payflow-ios-unsigned-ipa` artifact, unzip it -> PAYFLOW.ipa
+#  4. Sideload it on Windows with Sideloadly (free) + your free Apple ID:
+#     https://sideloadly.io — connect iPhone by USB, drag the .ipa in,
+#     sign with your Apple ID, install. Then on iPhone:
+#     Settings -> General -> VPN & Device Management -> trust your Apple ID.
+#
+# Limits of a FREE Apple ID (Apple-imposed, no tool can remove them):
+#  - App stops launching after 7 days -> re-sideload the same .ipa to refresh.
+#  - Max 3 sideloaded apps at once, ~10 apps/week.
+#  - No TestFlight / App Store without the paid Apple Developer Program ($99/yr).
+#    For that, use Codemagic (500 free min/month) with an App Store Connect API key.
+#
+# The .ipa is UNSIGNED by design. GitHub Actions never sees your Apple ID
+# or password — signing happens locally in Sideloadly on your own PC.
 name: Build PAYFLOW iOS (unsigned IPA)
 
 on:
@@ -12,13 +32,34 @@ jobs:
   build:
     runs-on: macos-15-intel
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - name: Select Xcode
-        run: sudo xcode-select -s /Applications/Xcode_16.app/Contents/Developer || sudo xcode-select -s /Applications/Xcode_15.app/Contents/Developer || sudo xcode-select -p
+      - name: Show installed Xcodes
+        run: |
+          echo "Installed Xcode bundles:"
+          ls -d /Applications/Xcode*.app 2>/dev/null || echo "(no Xcode*.app found)"
+          echo "Current developer dir:"
+          xcode-select -p || true
+
+      - name: Select Xcode 16
+        run: |
+          XCODE=$(ls -d /Applications/Xcode_16*.app 2>/dev/null | sort -V | tail -1)
+          if [ -z "$XCODE" ]; then
+            echo "No Xcode 16 bundle found — keeping the runner default:"
+            ls -d /Applications/Xcode*.app 2>/dev/null || true
+            xcode-select -p || true
+          else
+            echo "Selecting $XCODE"
+            sudo xcode-select -s "$XCODE/Contents/Developer"
+          fi
+          xcodebuild -version
+
+      - name: Validate project and scheme
+        run: xcodebuild -list -project PAYFLOW.xcodeproj
 
       - name: Build (unsigned)
         run: |
+          set -o pipefail
           xcodebuild -project PAYFLOW.xcodeproj \
             -scheme Payflow \
             -sdk iphoneos \
@@ -26,7 +67,7 @@ jobs:
             -derivedDataPath build \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGN_IDENTITY=""
+            CODE_SIGN_IDENTITY="" 2>&1 | tee build.log
 
       - name: Package .ipa
         run: |
@@ -40,4 +81,12 @@ jobs:
         with:
           name: payflow-ios-unsigned-ipa
           path: PAYFLOW.ipa
+          retention-days: 14
+
+      - name: Upload build log on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: payflow-build-log
+          path: build.log
           retention-days: 14
