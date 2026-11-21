@@ -159,9 +159,17 @@
 			isa = PBXGroup;
 			children = (
 				F04640FF7ED4D05DDA8F3081 /* Assets.xcassets */,
-				1544E66C3A96E1CB8ECA6246 /* sample-statement.csv */,
+				B11A461A85FD74F003FAA018 /* SampleStatements */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B11A461A85FD74F003FAA018 /* SampleStatements */ = {
+			isa = PBXGroup;
+			children = (
+				1544E66C3A96E1CB8ECA6246 /* sample-statement.csv */,
+			);
+			path = SampleStatements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
